@@ -25,6 +25,19 @@ The first goal is not to predict a magical exact price. The goal is to help a bu
 python app_v2.py
 ```
 
+## Hugging Face Space deployment
+
+The v2 Space package lives in `spaces/purchase-pulse-v2/`. It has its own `app.py`, `requirements.txt`, Space README, copied package code, knowledge notes, and data schema.
+
+To deploy it as a separate Space from v1:
+
+```powershell
+$env:HF_TOKEN="hf_your_write_token"
+python scripts/deploy_hf_v2.py --owner YOUR_HF_USERNAME --space Purchase-Pulse-v2
+```
+
+The script creates or updates `YOUR_HF_USERNAME/Purchase-Pulse-v2` as a Gradio Space.
+
 ## How the v2 app thinks
 
 Price:
